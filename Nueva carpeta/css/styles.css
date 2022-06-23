@@ -1,0 +1,246 @@
+/* VARIABLES A UTILIZAR */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --belladona: #2807076d;
+  --pink: #3a1156b4;
+  --boton: hsla(269, 36%, 84%, 0.322);
+  --backcolor: #c1b0b0;
+}
+/* CONFIGURACION INICIAL DE DIMENSIONES */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-snap-type: Y mandatory; /* habilita el scroll dinamico */
+}
+/* SCROLL DINAMICO */
+.servicio,
+.navegacion,
+.formulario {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+body {
+  font-size: 16px;
+  font-family: "PT Serif", serif;
+  /*  background-image: linear-gradient(
+    to top,
+    var(--white) 0%,
+    var(--backcolor) 100%
+  ); /* para acceder al fondo gradiente, necesitamos utilizar background image*/
+  margin-bottom: 1rem;
+}
+/* CONFIGURACION DE TITULOS */
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  padding: 1.5rem;
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+span {
+  font-size: 3.2rem;
+}
+.contenedor {
+  max-width: auto;
+  margin: 0 auto;
+}
+/* CUADRO DE FONDO DE SERVICIOS */
+.sombra {
+  width: 95.5%;
+  -webkit-box-shadow: -1px 5px 7px 0px rgba(140, 133, 140, 0.55);
+  -moz-box-shadow: -1px 5px 7px 0px rgba(140, 133, 140, 0.55);
+  box-shadow: -1px 5px 7px 0px rgba(140, 133, 140, 0.55);
+  background-color: #a1a1a18f;
+  border-radius: 1rem; /* agrega esquinas redondeadas */
+}
+/* PRIMER BOTON DE CONTACTO */
+.boton {
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+  /*width: 90%;*/
+  text-decoration: none;
+  background-color: var(--boton);
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+}
+@media (min-width: 768px) {
+  .boton {
+    width: auto;
+  }
+}
+.boton:hover {
+  cursor: pointer;
+}
+/* BARRA DE NAVEGACION*/
+.navegacion {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column; /* habilita el codigo justify cont que nos permitira editar los espacios de la barra de nav, asi tambien los elementos    se muestran de izquierda a derecha */
+  text-align: center; /*permite mover el contenido horizontalmente*/
+}
+@media (min-width: 768px) {
+  .navegacion {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+/* VENTANAS DE LA BARRA DE NAVEGACION */
+.navegacion a {
+  padding: 1rem;
+  background-color: var(--black);
+  color: var(
+    --white
+  ); /* agrega el color secundario a los enlaces de la barra de navegacion */
+  text-decoration: none; /* Elimina el subrayado de tipo link de la barra de navegacion */
+  font-size: 1.8rem;
+}
+/* CURSOR SOBRE LA BARRA DE NAVEGACION */
+.navegacion a:hover {
+  background-color: var(--boton);
+  color: var(--white);
+  border-radius: 0.6rem;
+}
+.devimg {
+  background-image: url(../img/devimg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  position: relative; /* el padre siempre debe tener posicion relativa */
+}
+/* AGREGA SOMBRA A LA IMAGEN PRINCIPAL DE FONDO */
+.contenido-devimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000008a1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contenido-devimg h2,
+.contenido-devimg p {
+  color: var(--white);
+}
+/* SECCIONES */
+@media (min-width: 768px) {
+  .divisiones {
+    display: grid; /* permite definir la ubicacion y el tamaño de los elementos en el sitio web */
+    grid-template-columns: 33.3% 33.3% 33.3%; /* css grid da acceso a las dos dimensiones para modificar la ubicacion de un elemento */
+    column-gap: 1.2rem; /* sirve para dar separacion a lo elementos creados con el css grid */
+  }
+} /* incluimos dentro del media query el codigo original para realizar la adaptacion (Reseteo) a pantallas pequeñas */
+
+.servicio {
+  display: flex; /* coloca todo de izquiera a derecha */
+  flex-direction: column;
+  align-items: center;
+}
+.servicio h3 {
+  line-height: 2rem; /* para agregar interlineado a los textos de la pagina */
+  font-weight: bold;
+  text-align: center;
+}
+.servicio p {
+  line-height: 2; /*esta propiedad te permite interlinear o espaciar el texto */
+  text-align: center;
+  display: flex;
+} /* contiene codigos para el parrafo de los iconos */
+
+.servicio .iconos {
+  height: 15rem;
+  width: 15rem;
+  background-color: #061410;
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly; /* mirar las opciones que hay en justify para ver cual se adapta mejor */
+  align-items: center;
+} /* contiene codigo para los iconos principales */
+
+/* CONTACTO */
+.formulario {
+  background-color: hsla(270, 6%, 14%, 0.396);
+  border-radius: 1rem;
+  width: min(600px, 100%); /*utiliza el valor mas pequeño disponible*/
+  margin: 0 auto; /* Se puede utilizar en el caso en que el padre no tenga un display flex*/
+  padding: 2rem;
+}
+
+.formulario fieldset {
+  border: none; /* sirve para eliminar el borde que trae por default el formulario */
+}
+
+/* TITULO DEL FORMULARIO */
+.formulario legend {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(#000000);
+}
+@media (min-width: 768px) {
+  .contenedor-campos {
+    display: grid;
+    grid-template-columns: 50% 50%; /*divide el area seleccionada en el porcentaje de columnas que indiques*/
+    grid-template-rows: auto auto 20rem;
+    column-gap: 1rem; /* separacion de columnas */
+  }
+  .campos:nth-child(3),
+  .campos:nth-child(4) {
+    grid-column: 1 / 3;
+  }
+}
+
+.campo {
+  margin-bottom: 0.5rem;
+}
+.campos label {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(#000000);
+  display: block; /* hace que los inputs ocupen todo el espacio por igual */
+}
+.text-input {
+  width: 100%;
+  max-width: auto;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.boton-formulario {
+  margin: 1.5rem;
+  padding: 1.2rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  background-color: #00000080;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  border: none;
+  width: auto;
+  display: flex;
+  justify-content: end;
+}
+.footer p {
+  text-align: center;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Web Dev</title>
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Normalize, cumple la funcion de ejectar el codigo de la misma manera en todos los navegadores-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Libreria de la cual se enlaza la fuente-->
+    <link rel="preload" href="css/styles.css" as="style" />
+    <!--realiza la precarga de la hoja de estilo en css-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!--conecta la hoja de html con la hoja de diseño de css-->
+  </head>
+  <body>
+    <header>
+      <h1>Hugo Carreras <span> Freelancer</span></h1>
+      <!--añadimos la clase titulo a modo de poder realizar una coneccion especifica con la hoja de diseño en css-->
+    </header>
+
+    <nav class="navegacion contenedor">
+      <a href="#">VENTANA 1</a>
+      <a href="#">VENTANA 2</a>
+      <a href="#">VENTANA 3</a>
+      <a href="#">VENTANA 4</a>
+    </nav>
+
+    <section class="devimg">
+      <div class="contenido-devimg">
+        <h2>Diseño y Desarrollo Web</h2>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-map-pin"
+            width="60"
+            height="60"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="11" r="3" />
+            <path
+              d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+            />
+          </svg>
+          Asuncion, Paraguay
+        </p>
+        <a class="boton" href="#">Contactar</a>
+      </div>
+    </section>
+
+    <main class="sombra contenedor">
+      <h2>Mis Proyectos</h2>
+      <div class="divisiones">
+        <section class="servicio">
+          <h3>Diseño Web</h3>
+          <div class="iconos">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-tabler"
+              width="65"
+              height="65"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M8 9l3 3l-3 3" />
+              <line x1="13" y1="15" x2="16" y2="15" />
+              <rect x="4" y="4" width="16" height="16" rx="4" />
+            </svg>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Accusantium, reprehenderit.
+          </p>
+        </section>
+        <section class="servicio">
+          <h3>Aplicaciones</h3>
+          <div class="iconos">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-device-mobile"
+              width="65"
+              height="65"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="7" y="4" width="10" height="16" rx="1" />
+              <line x1="11" y1="5" x2="13" y2="5" />
+              <line x1="12" y1="17" x2="12" y2="17.01" />
+            </svg>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
+            placeat.
+          </p>
+        </section>
+        <section class="servicio">
+          <h3>E-Commerce</h3>
+          <div class="iconos">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-report-analytics"
+              width="65"
+              height="65"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="#ffffff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"
+              />
+              <rect x="9" y="3" width="6" height="4" rx="2" />
+              <path d="M9 17v-5" />
+              <path d="M12 17v-1" />
+              <path d="M15 17v-3" />
+            </svg>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, ex.
+          </p>
+        </section>
+      </div>
+      <section>
+        <h2>Contacto</h2>
+
+        <form class="formulario">
+          <fieldset>
+            <legend>Ingrese sus datos de contacto</legend>
+            <div class="contenedor-campos">
+              <div class="campos">
+                <label>Nombre</label>
+                <input
+                  class="text-input"
+                  type="text"
+                  placeholder="Ingrese su nombre aqui"
+                />
+              </div>
+
+              <div class="campos">
+                <label>Telefono</label>
+                <input class="text-input" placeholder="(+595)" />
+              </div>
+
+              <div class="campos">
+                <label>Correo</label>
+                <input class="text-input" placeholder="ejemplo@gmail.com" />
+              </div>
+
+              <div class="campos">
+                <label>Mensaje</label>
+                <textarea class="text-input"> </textarea>
+              </div>
+            </div>
+            <button class="boton-formulario">Enviar</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Descripcion a pie de pagina</p>
+    </footer>
+  </body>
+</html>
